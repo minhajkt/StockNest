@@ -6,6 +6,8 @@ import cors from 'cors'
 import customerRoutes from './routes/customerRoutes';
 import prouductRoutes from './routes/productRoutes';
 import salesRoutes from './routes/salesRoutes';
+import dotenv from 'dotenv'
+dotenv.config()
 
 const app = express()
 
