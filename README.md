@@ -26,13 +26,18 @@ StockNest is a sales and inventory management system that allows users to track 
 ```
 git clone https://github.com/your-username/StockNest.git
 ```
+
+```
 cd StockNest
+```
 
 
 ### 2. Setup Backend
+```
 cd server
 npm install
 npm run dev
+```
 
 ### 3. Setup Frontend
 cd ../client
