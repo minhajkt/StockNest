@@ -110,15 +110,15 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
   // "typeRoots": ["./node_modules/@types"],              /* Explicitly specify where type definitions are located */
-  //   "types": [
-  //     "node",                                           /* Include Node.js types */
-  //     "express",                                         /* Include Express types */
-  //     "cookie-parser",                                   /* Include cookie-parser types */
-  //     "cors",                                            /* Include cors types */
-  //     "jsonwebtoken",                                    /* Include jsonwebtoken types */
-  //     "multer",                                          /* Include multer types */
-  //     "nodemailer"                                       /* Include nodemailer types */
-  //   ]
+    "types": [
+      "node",                                           /* Include Node.js types */
+      "express",                                         /* Include Express types */
+      "cookie-parser",                                   /* Include cookie-parser types */
+      "cors",                                            /* Include cors types */
+      "jsonwebtoken",                                    /* Include jsonwebtoken types */
+      "multer",                                          /* Include multer types */
+      "nodemailer"                                       /* Include nodemailer types */
+    ]
   },
    "include": ["src/**/*"],                                /* Include all source files from the src folder */
   "exclude": ["node_modules", "dist"]   
