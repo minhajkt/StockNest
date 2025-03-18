@@ -40,6 +40,8 @@ npm run dev
 ```
 
 ### 3. Setup Frontend
+```
 cd ../client
 npm install
 npm run dev
+```
