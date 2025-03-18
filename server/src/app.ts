@@ -1,4 +1,4 @@
-import express from 'express'
+import express, { Request, Response } from 'express'
 import { connectDB } from './config/db';
 import authRouter from './routes/authRoutes';
 import cookieParser from 'cookie-parser';
@@ -30,7 +30,7 @@ app.use("/api/sale", salesRoutes);
 const port = process.env.PORT || 4000;
 
 
-app.get('/', (req, res) => {
+app.get('/', (req:Request, res:Response) => {
     res.send('Hello world')
 })
 
