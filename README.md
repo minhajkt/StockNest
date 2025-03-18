@@ -23,8 +23,9 @@ StockNest is a sales and inventory management system that allows users to track 
 
 ### 1. Clone the Repository
 
-
+```
 git clone https://github.com/your-username/StockNest.git
+```
 cd StockNest
 
 
