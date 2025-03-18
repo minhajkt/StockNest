@@ -323,7 +323,7 @@ const Products = () => {
         count={allProducts.length}
         rowsPerPage={rowsPerPage}
         page={page}
-        onPageChange={(event, newPage) => setPage(newPage)}
+        onPageChange={(_, newPage) => setPage(newPage)}
         onRowsPerPageChange={(event) => {
           setRowsPerPage(parseInt(event.target.value, 10));
           setPage(0);

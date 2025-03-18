@@ -2,7 +2,7 @@ import axios from "axios";
 import { refreshAccessToken } from "../services/authServices";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:4000/api",
+  baseURL: import.meta.env.VITE_BASE_URL,
   headers: { "Content-Type": "application/json" },
   withCredentials:true
 });
