@@ -27,8 +27,8 @@ function App() {
               <Route path="customers" element={<Customers />} />
               <Route path="products" element={<Products />} />
               <Route path="sales" element={<Sales />} />
-              <Route path="*" element={<PageNotFound />} />
             </Route>
+              <Route path="*" element={<PageNotFound />} />
           </Routes>
         </Router>
       </AppTheme>
