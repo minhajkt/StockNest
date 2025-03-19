@@ -25,6 +25,7 @@ const CustomerLedger = () => {
     const fetchLedger = async () => {
       try {
         const data = await getCustomerLedger();
+        console.log("Fetched Ledger Data:", data);
         setLedger(data);
       } catch (error) {
         console.error("Failed to fetch customer ledger", error);
@@ -43,7 +44,7 @@ const CustomerLedger = () => {
         Customer Ledger
       </Typography>
 
-      {ledger.length > 0 ? ( // ✅ Check before rendering table
+      {ledger.length > 0 ? ( 
         <Table>
           <TableHead>
             <TableRow sx={{ bgcolor: "#ecf0f1" }}>

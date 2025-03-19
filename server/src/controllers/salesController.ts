@@ -5,6 +5,7 @@ import { MESSAGES } from "../utils/messages";
 import Product from "../models/Product";
 import { sendSalesReportEmail } from "../utils/sendMail";
 import { generateSalesReportPDF } from "../utils/salesReport";
+import mongoose from "mongoose";
 
 interface authenticatedRequest extends Request {
   user?: { userId: string };
@@ -13,6 +14,7 @@ interface authenticatedRequest extends Request {
 export const getSales = async(req:authenticatedRequest, res: Response) : Promise<void> => {
     try {
         const userId = req.user?.userId
+        console.log('gettings sale', userId)
         const sales = await Sales.find({createdBy: userId}).populate('product')
         res.status(HttpStatus.OK).json({message: MESSAGES.SALES_FETCHED, sales})
     } catch (error) {
@@ -85,11 +87,12 @@ export const sendReport = async(req: Request, res: Response): Promise<void> => {
     }
 }
 
-export const getCustomerLedger = async (req: Request, res: Response): Promise<void> => {
+export const getCustomerLedger = async (req: authenticatedRequest, res: Response): Promise<void> => {
     try {
-        const userId = req.params.userId
+        const userId = req.user?.userId
+        const user = new mongoose.Types.ObjectId(userId);
         const customerSales = await Sales.aggregate([
-            {$match: { createdBy: userId }},
+            {$match: { createdBy: user }},
             {
                 $group: {
                     _id: "$customer", 
@@ -102,7 +105,6 @@ export const getCustomerLedger = async (req: Request, res: Response): Promise<vo
                 $sort: { _id: 1 }
             }
         ]);
-
         res.status(200).json(customerSales);
     } catch (error) {
         console.error("Error fetching customer ledger", error);

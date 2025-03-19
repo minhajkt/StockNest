@@ -39,6 +39,7 @@ export const handleSendEmail = async (recipient:string) => {
 export const getCustomerLedger = async () => {
   try {
     const response = await axiosInstance.get("/sale/customer-ledger");
+    console.log('ledger data',response.data)
     return response.data;
   } catch (error) {
     console.error("Error fetching customer ledger", error);

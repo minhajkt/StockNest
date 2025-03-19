@@ -6,7 +6,7 @@ export interface ISale extends Document {
     product: string
     quantity: number
     price: number
-}
+} 
 
 const saleSchema: Schema = new Schema({
   date: {type: Date, required: true, default:new Date().toLocaleDateString()},

@@ -8,6 +8,7 @@ import Customers from './pages/Customers';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import Sales from './pages/Sales';
+import PageNotFound from './components/PageNotFound';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <AppTheme>
         <Router>
           <Routes>
+            <Route path="/" element={<LoginPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<Signup />} />
 
@@ -25,6 +27,7 @@ function App() {
               <Route path="customers" element={<Customers />} />
               <Route path="products" element={<Products />} />
               <Route path="sales" element={<Sales />} />
+              <Route path="*" element={<PageNotFound />} />
             </Route>
           </Routes>
         </Router>
