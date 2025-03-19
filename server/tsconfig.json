@@ -110,13 +110,6 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
     "types": [
-      "node" /* Include Node.js types */,
-      "express" /* Include Express types */,
-      "cookie-parser" /* Include cookie-parser types */,
-      "cors" /* Include cors types */,
-      "jsonwebtoken" /* Include jsonwebtoken types */,
-      "multer" /* Include multer types */,
-      "nodemailer" /* Include nodemailer types */
     ],
     "typeRoots": ["./node_modules/@types", "./node_modules"]
   },
